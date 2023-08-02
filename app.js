@@ -23,6 +23,22 @@ app.get("/",(req,res)=>{
   }
 })
 
+app.get("/about", (req,res)=>{
+  try {
+    res.render("about", {aboutContent : aboutContent})
+  } catch (error) {
+    console.log(error)
+  }
+})
+
+
+app.get("/contact",(req,res)=>{
+  try {
+      res.render("contact", {contactContent: contactContent})
+  } catch (error) {
+    console.log(error)
+  }
+})
 
 
 
